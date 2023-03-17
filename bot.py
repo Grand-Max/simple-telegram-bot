@@ -1,5 +1,6 @@
 import re
 import random
+import sys
 
 import requests
 from lxml import html
@@ -77,9 +78,9 @@ def haber_at(bot, update):
 
 def main():
     __debug("CALL main")
-
+	
     __debug("main: Initializing updater")
-    updater = Updater("BOT TOKEN")
+    updater = Updater(sys.argv[1])
     dp = updater.dispatcher
 
     __debug("main: Configuring handlers")
